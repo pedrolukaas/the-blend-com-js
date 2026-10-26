@@ -1,0 +1,173 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Detalhes | Blend House 🍔</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- CABEÇALHO -->
+    <header class="header">
+      <section>
+        <a href="index.html" class="logo">
+          <img
+            src="arquivo/imagens/blend.png"
+            alt="Blend House"
+          />
+        </a>
+
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">INÍCIO</a></li>
+            <li><a href="cardapio.html">CARDÁPIO</a></li>
+            <li><a href="detalhes.html">DETALHES</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <!-- DETALHES DO PRODUTO -->
+    <main>
+      <section class="detalhes detalhes-container">
+        <div class="imagem-produto">
+          <img
+            id="imagem-produto"
+            src="arquivo/imagens/maior.png"
+            alt="Hambúrguer Blend House"
+          />
+        </div>
+
+        <div class="info-produto">
+          <h1 id="nome-produto">
+            Carregando produto...
+          </h1>
+
+          <p id="descricao-produto">
+            Confira os detalhes do nosso hambúrguer.
+          </p>
+
+          <div class="botoes-detalhes">
+            <a href="cardapio.html" class="btn-voltar">
+              VOLTAR AO CARDÁPIO
+            </a>
+
+            <button
+              type="button"
+              class="btn-enviar"
+              id="realizar-pedido"
+            >
+              REALIZAR PEDIDO
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- MODAL DO PEDIDO -->
+    <div
+      id="pedido-modal"
+      class="pedido-modal"
+      aria-hidden="true"
+    >
+      <div
+        class="pedido-caixa"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="titulo-pedido"
+      >
+        <button
+          type="button"
+          id="fechar-pedido"
+          class="fechar-pedido"
+          aria-label="Fechar pedido"
+        >
+          &times;
+        </button>
+
+        <h2 id="titulo-pedido">
+          Seu pedido 🍔
+        </h2>
+
+        <p>Confira os dados do seu pedido.</p>
+
+        <h3 id="pedido-produto">
+          Produto selecionado
+        </h3>
+
+        <label for="quantidade-pedido">
+          Quantidade:
+        </label>
+
+        <input
+          type="number"
+          id="quantidade-pedido"
+          min="1"
+          max="99"
+          value="1"
+        />
+
+        <label for="nome-cliente">
+          Seu nome:
+        </label>
+
+        <input
+          type="text"
+          id="nome-cliente"
+          maxlength="80"
+          placeholder="Digite seu nome"
+        />
+
+        <p class="pedido-aviso">
+          Este pedido é apenas uma simulação.
+        </p>
+
+        <div class="botoes-pedido">
+          <button
+            type="button"
+            id="confirmar-pedido"
+            class="btn-confirmar"
+          >
+            CONFIRMAR PEDIDO
+          </button>
+
+          <button
+            type="button"
+            id="cancelar-pedido"
+            class="btn-cancelar"
+          >
+            CANCELAR
+          </button>
+        </div>
+
+        <!-- MENSAGEM DE SUCESSO -->
+        <div class="pedido-sucesso" hidden>
+          <p id="mensagem-sucesso"></p>
+
+          <button
+            type="button"
+            id="voltar-cardapio"
+            class="btn-confirmar"
+          >
+            VOLTAR AO CARDÁPIO
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/detalhes.js"></script>
+  </body>
+</html>
